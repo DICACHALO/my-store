@@ -1,9 +1,17 @@
-<h1>Ejemplos de string interpolation</h1>
-<h2>{{ 'Hola mundo'.repeat(5) }}</h2>
+<h2>Ejemplos de string interpolation</h2>
+<h6>{{ 'Hola mundo'.repeat(5) }}</h6>
 <p>
   La suma de 3 + 3 = {{3+3}}
 </p>
 <img src={{img}} />
 <hr>
-<h2></h2>
-<router-outlet></router-outlet>
+<h2>Propiedades</h2>
+<button [disabled]="btnDisabled">Enviar</button>
+<input type="text" [value]="title">
+<progress max="100" [value]="age"></progress>
+<img width="200" [src]="img" alt="imagen random">
+
+<h5>Renderizando propiedades de un objeto</h5>
+<input type="text" [value]="person.name">
+<progress max="100" [value]="person.age"></progress>
+<img width="200" [src]="person.avatar" alt="imagen random">
