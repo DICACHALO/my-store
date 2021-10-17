@@ -36,4 +36,12 @@ apenas tenía agua pura como para ocho días
 <br>
 <input type="text" [value]="person.name" (keyup)="changeName($event)">
 <p>Nombre {{person.name}}</p>
+<hr>
+<h2>NgModel</h2>
+<p>Nombre {{person.name}}</p>
+<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name">
+<p>Valid: {{ nameInput.valid }} </p>
+<p>Age {{person.age}}</p>
+<input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age">
+<p>Valid: {{ ageInput.valid }} </p>
 
