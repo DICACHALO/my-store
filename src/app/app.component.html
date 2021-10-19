@@ -44,4 +44,37 @@ apenas tenía agua pura como para ocho días
 <p>Age {{person.age}}</p>
 <input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age">
 <p>Valid: {{ ageInput.valid }} </p>
-
+<hr>
+<h2>*ngIf</h2>
+<input type="text" required [(ngModel)]="person.name">
+<p *ngIf="person.name === 'diana'">My content</p>
+<p *ngIf="person.name === 'carolina' && person.age === 27; else elseBlock">Other content</p>
+<ng-template #elseBlock>
+  <p>Bloque de else</p>
+</ng-template>
+<hr>
+<h2>*ngFor</h2>
+<ul>
+  <li *ngFor="let name of names2">
+    {{name}}
+  </li>
+  <li *ngFor="let emoji of emojis; index as i">
+   {{i}} {{emoji}}
+  </li>
+</ul>
+<li *ngIf="names.length === 0">No hay nombres</li>
+<li *ngFor="let name of names; index as i">
+  {{i}} {{name}}
+  <button (click)="deleteName(i)">Delete</button>
+</li>
+<input type="text" required [(ngModel)]="newName">
+<button (click)="addName()">Add name</button>
+<br><hr>
+<h2>*ngFor Objs</h2>
+<div>
+  <div *ngFor="let product of products">
+    <img [src]="product.image" alt="image" >
+    <h2> {{product.price}} </h2>
+    <p> {{product.name}} </p>
+  </div>
+</div>
