@@ -78,3 +78,17 @@ apenas tenía agua pura como para ocho días
     <p> {{product.name}} </p>
   </div>
 </div>
+<br><hr>
+<h2>ngSwitch</h2>
+<input type="text" required [(ngModel)]="person.name"/>
+<div [ngSwitch]="person.name">
+  <p *ngSwitchCase="'Carolina'">
+    La persona es Carolina
+  </p>
+  <p *ngSwitchCase="'Laura'">
+    La persona es Laura
+  </p>
+  <p *ngSwitchDefault>
+    No hay match
+  </p>
+</div>
