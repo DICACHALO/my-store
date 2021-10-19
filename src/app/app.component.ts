@@ -25,6 +25,8 @@ export class AppComponent {
 
   newName = '';
 
+  widthImg= 100;
+
   products:Product[] = [
     {
       name: 'EL mejor juguete',
@@ -57,7 +59,8 @@ export class AppComponent {
       price: 3434,
       image: 'https://i.blogs.es/018610/xiaomi-gafas-00/450_1000.jpeg'
     }
-  ]
+  ];
+
 
   toggleButton(){
     this.btnDisabled = !this.btnDisabled;
