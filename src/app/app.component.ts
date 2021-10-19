@@ -27,6 +27,12 @@ export class AppComponent {
 
   widthImg= 100;
 
+  box = {
+    width: 100,
+    height: 100,
+    background: 'red'
+  };
+
   products:Product[] = [
     {
       name: 'EL mejor juguete',

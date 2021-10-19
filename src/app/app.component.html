@@ -121,3 +121,22 @@
   }"
 />
 <p class="message-error" [class.invalid]="nameInput2.invalid"></p>
+<br />
+<div class="styles">
+  <div>
+    <input type="number" [(ngModel)]="box.width" />
+    <input type="number" [(ngModel)]="box.height" />
+    <input type="color" [(ngModel)]="box.background" />
+  </div>
+  <div>
+    <div
+      [ngStyle]="{
+        'width.px': box.width,
+        'height.px': box.height,
+        'background-color': box.background,
+        display: 'block'
+      }"
+    ></div>
+  </div>
+</div>
+<br>
